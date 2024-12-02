@@ -1,0 +1,90 @@
+ 
+/* .carousel-inner{
+    /* border: solid; */
+    /* margin: 0 12% ; */
+    /* background-color: cadetblue; */
+    /* background: ; */
+   
+/* } */
+/* .carousel-inner img{
+    height: 500px;
+    }
+#carouselExample{
+    width: 80%;
+} */
+#banner{
+    align-items: center;
+    background: #E3E3E3;
+    display: flex;
+    /* height: 100vh; */
+    justify-content: center;
+}
+
+@keyframes scroll {
+   0% {
+       transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-330px * 2));
+      /* transform: translateX(300)); */
+    }
+     /* 0%{left: 0px;} */
+     /* 100%{left: 100px;} */
+
+     /* finish this */
+
+  }
+  
+  .slider {
+    /* background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125); */
+    border: solid green 5px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    /* width: 960px; */
+    width: 100vh;
+  }
+  
+  /* .slider::before,
+  .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 300px;
+    position: absolute;
+    width: 50px;
+    z-index: 2;
+  } */
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .slide-track {
+    border:  solid;
+    animation: scroll 5s linear infinite;
+    display: flex;
+    /* width: calc(700px * 2); */
+    /* width: 300px; */
+  }
+  
+  /* .slider .slide {
+    border: solid blue;
+    height: 100px;
+    width: 700px;
+  } */
+
+
+  .slide img{
+    height: 300px;
+    width: 700px;
+  }
+  

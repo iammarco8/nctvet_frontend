@@ -1,0 +1,17 @@
+table{
+    /* column-gap: 3px; */
+    /* column-span: all; */
+    padding:30px;
+    border: 5px solid green;
+    border-radius: 3px;
+    /* border-sapcing:30px; */
+    margin: auto;
+    border-radius: 30px;
+}
+
+tbody{
+    background-color: burlywood;
+}
+td{
+    border: 2px solid  brown;
+}

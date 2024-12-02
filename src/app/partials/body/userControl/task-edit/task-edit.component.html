@@ -1,0 +1,52 @@
+<h2>Task id is: {{id}}</h2>
+{{admin}}
+
+<div class="container-fluid">
+    <form (ngSubmit)="updateTask(assignForm)" #assignForm = "ngForm">
+        <div>
+            <!-- <label for="admin">{{currentTask['admin']}}</label> -->
+            <label for="admin"></label>
+            <!-- <input type="text" name="admin" ngModel value="{{currentTask['admin']}}"> -->
+            <input type="text" name="admin" ngModel>
+            <!-- <input type="text" name="admin" [(ngModel)]="currentTask['admin']"> -->
+        </div>
+        <br>
+        <div>
+            <label for="task_name">"Task Name" </label>
+            <input type="text" ngModel [value]="task_name" name="task_name">
+        </div>
+        <br>
+        <div>
+            <label for="date_assigned"> Current date assiend: {{date_assigned}}  </label>
+            <input type="date" ngModel [value]="date_assigned" name="date_assigned" >
+        </div>
+        <br>
+        <div>
+            <label for="date_due">Date expected to complete: {{assignData.date_due}}</label>
+            <input type="date" ngModel [valueAsDate]="date_due" name="date_due">
+        </div>
+        <br>
+        <div>
+            <label for="description" name="description"> Current Outline of task: <br> {{'description'}}</label>
+            <input type="text" ngModel [value]="" name="description">
+        </div>
+        <br>
+        <div>
+            <label for="status">Currently:{{status}}</label>
+            <input type="text" name="status" ngModel>
+        </div>
+        <br>
+        <div>
+            <label for="note">Outlined details are:<br>{{'note'}} </label>
+            <textarea type="text" name="note" ngModel > </textarea>
+        </div>
+        <br>
+        <div>
+            <label for="user_assigned">The User assigned to complete the task is:  </label>
+            <input type="text" name="user_assigned" ngModel>
+        </div>
+        <button type="submit" class="btn btn-primary"> Assign</button>
+    </form>
+    <br><br><br>
+</div>
+<button type="button" (click)="deleteTask()">DELETE!</button>

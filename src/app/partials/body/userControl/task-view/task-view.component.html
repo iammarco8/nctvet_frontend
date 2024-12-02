@@ -1,0 +1,34 @@
+    <!-- only allow the tasks assigned to the user to be seen by the used
+ only allow the tasks assigned by the administrator to be seen by the admin 
+  contemplate the idea of veiwing the admin profile from the user side-->
+    
+    <div>    
+        <a routerLink="/createTask">Click here to create new task</a>
+    </div>
+    <table>
+    <thead>
+        <th>Administrated by:</th>
+        <th>Name</th>
+        <th>Date Assigned</th>
+        <th>Date Due</th>
+        <!-- <th>Description</th> -->
+        <th>Status</th>
+        <!-- <th>Note</th> -->
+    </thead>
+
+    <tbody>
+        <tr ng *ngFor=" let data of tasks">
+
+            <td>{{data['admin']}}</td>
+            <td>{{data['task_name']}}</td>
+            <td>{{data['date_assigned']}}</td>
+            <td>{{data['date_due']}}</td>
+            <!-- <td>{{data['description']}}</td> -->
+            <td>{{data['status']}}</td>
+            <!-- <td>{{data['note']}}</td> -->
+            <td><a routerLink="/editTask/{{data['id']}}">edit</a></td>
+            
+        </tr>
+        
+    </tbody>
+</table>

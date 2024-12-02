@@ -1,0 +1,32 @@
+
+
+<div class="createForm container-fluid">
+    <form (ngSubmit)="createTask(taskForm)" #taskForm="ngForm">
+        <label for="admin">Your user ID is: {{userName}}.</label>
+        <br>
+        <input type="text" name="admin" hidden id="" [(ngModel)]="userName">
+        <br>
+
+        <!-- <label for="user">Assigned to:</label> -->
+        <br>
+        
+        <label for="task_name">Title of task:</label>
+        <br>
+        <input type="text" style="width: 50vw;" name="task_name" ngModel placeholder="Input the name of task here">
+        <br>
+        <label for="description">Decribe the task</label>
+        <input type="text" style="width: 100vw;" ngModel placeholder="Give a description of the task mentioned" name="description" >
+        <br>
+        <label for="date_due">Select the date of expected completion <b>(Reccomended)</b></label>
+        <input type="date" name="date_due" ngModel id="">
+        <br>
+        <label for="status">Status of task</label>
+        <input type="text" style="width: 100vw;" name="status" placeholder="Indicate Whether the task is concluded, in progress or yet to be commenced" ngModel>
+        <br>
+        
+        <label for="note">Note Breifly</label>
+        <textarea type="text" style="width: 100vw;" name="note" placeholder="Include any outstanding/ imortant aspects to pay attention to in undertaking of the task" ngModel id=""></textarea>
+
+        <button type="submit" class="btn btn-primary"> Assign</button>
+    </form>
+</div>
